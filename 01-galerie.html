@@ -82,6 +82,13 @@
     /* Height auto for keeping the ratio */
     height: auto;
 }
+
+.ImageMenu {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
     </style>
 </head>
 <body x-data="{ affiche:null}">
@@ -90,9 +97,12 @@
 <div class="overlay" x-show="affiche" @click="affiche=null" @keyup.escape.window="affiche=null">
     <figure><img :src="affiche" alt="image 237... un chiot"></figure>
 </div>
-<img src="https://picsum.photos/id/236/200/300" alt="miniature chiot"
-@click="affiche='https://picsum.photos/id/236/200/300'">
-<img src="https://picsum.photos/id/237/200/300" alt="miniature chiot"
-@click="affiche='https://picsum.photos/id/237/200/300'">
+<section class="ImageMenu">
+    <img src="https://picsum.photos/id/236/200/300" alt="miniature chiot"
+    @click="affiche='https://picsum.photos/id/236/200/300'">
+    <img src="https://picsum.photos/id/237/200/300" alt="miniature chiot"
+    @click="affiche='https://picsum.photos/id/237/200/300'">
+</section>
+
 </body>
 </html>

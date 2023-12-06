@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+        .liste{
+            display: block;
+            background-color: grey;
+            width: 25%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            list-style: none;
+            font-size: 1.5rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
 </head> 
 <body>
 <h1>JSON</h1>
-<ul x-data="{
+<ul class="liste" 
+x-data="{
     async donnée() {
         const resp=await fetch('x-data.json');
         return await resp.json();
